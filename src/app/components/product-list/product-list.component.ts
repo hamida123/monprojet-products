@@ -12,7 +12,8 @@ export class ProductListComponent implements OnInit {
   constructor() {
           this.data= [{code: 'p100', libelle: 'cafe', prixUnitaire: 500},
                       {code: 'p200', libelle: 'cafe', prixUnitaire: 500},
-                      {code: 'p300', libelle: 'cafe', prixUnitaire: 500}];
+                      {code: 'p300', libelle: 'cafe', prixUnitaire: 500}
+                      {code: 'p400', libelle: 'the', prixUnitaire: 500}];
    }
 
   ngOnInit() {
