@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {RouterModule, Route, RoutesRecognized} from '@angular/router';
+import {RouterModule, Route, ActivatedRoute} from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -10,16 +10,18 @@ import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { WelcomeComponent } from './components/welcome/welcome.component';
 import { NotFountComponent } from './components/not-fount/not-fount.component';
+import { RoutingModule } from './routing-module/routing-module';
+import { HttpClient } from 'selenium-webdriver/http';
 
 
 
-
-const routes: Route[] =[
+/*const routes: Route[] =[
   {path: 'welcome', component: WelcomeComponent},
   {path: 'list', component: ProductListComponent},
   {path: '', component: WelcomeComponent, pathMatch: 'full'},
-  {path: '**', component: NotFountComponent}
-];//w'll be
+  {path: '**', component: NotFountComponent},
+
+];//w'll be*/
 
 
 
@@ -35,7 +37,7 @@ const routes: Route[] =[
   imports: [
     BrowserModule,
     HttpClientModule,
-    RouterModule.forRoot(routes)
+    RoutingModule
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
