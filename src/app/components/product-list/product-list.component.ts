@@ -10,12 +10,14 @@ import { ProductService } from '../../services/product.service';
 export class ProductListComponent implements OnInit {
   public data: Product[];
 
-  constructor(private _service: ProductService) {//declarer une dependance pour le service
-
-   }
-
-  ngOnInit() {//Equivalent @PostConstruct de java EE
-    this._service.getProducts().subscribe(result => {this.data = result; });
+  constructor(private _service: ProductService) {
+    // declarer une dependance pour le service
   }
 
+  ngOnInit() {
+    // Equivalent @PostConstruct de java EE
+    this._service.getProducts().subscribe(result => {
+      this.data = result;
+    });
+  }
 }
